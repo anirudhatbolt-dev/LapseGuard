@@ -1,27 +1,28 @@
 [phases.setup]
 nixPkgs = [
   "nodejs_20",
-  "chromium",
+  "glib",
   "nss",
   "nspr",
+  "dbus",
   "atk",
-  "at-spi2-atk",
+  "cups",
+  "libdrm",
   "xorg.libX11",
-  "xorg.libxcb",
   "xorg.libXcomposite",
   "xorg.libXdamage",
   "xorg.libXext",
   "xorg.libXfixes",
   "xorg.libXrandr",
-  "libxkbcommon",
+  "xorg.libxcb",
   "mesa",
   "expat",
-  "glib",
-  "dbus",
+  "libxkbcommon",
   "pango",
   "cairo",
-  "cups",
-  "alsa-lib"
+  "alsa-lib",
+  "at-spi2-atk",
+  "at-spi2-core"
 ]
 
 [phases.install]
