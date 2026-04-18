@@ -1,0 +1,17 @@
+{
+    "name": "lapsequard-scraper",
+    "version": "1.0.0",
+    "description": "Playwright scraper for insurance renewal alerts",
+    "main": "index.js",
+    "scripts": {
+      "start": "PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium && node index.js",
+      "dev": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "playwright": "^1.43.0"
+    },
+    "engines": {
+      "node": ">=18"
+    }
+  }
