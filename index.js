@@ -41,7 +41,16 @@ app.post("/scrape", async (req, res) => {
   try {
     // ── 1. Launch ──────────────────────────────────────────────
     send("log", "Launching browser...");
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch({
+        headless: true,
+        args: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-gpu",
+          "--single-process",
+        ],
+      });
     const page = await browser.newPage();
 
     // ── 2. Navigate to login ───────────────────────────────────
