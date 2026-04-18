@@ -1,5 +1,6 @@
 [phases.setup]
 nixPkgs = [
+  "nodejs_20",
   "chromium",
   "nss",
   "nspr",
@@ -23,8 +24,11 @@ nixPkgs = [
   "alsa-lib"
 ]
 
+[phases.install]
+cmds = ["npm install"]
+
 [phases.build]
-cmds = ["npm install", "npx playwright install chromium"]
+cmds = ["npx playwright install chromium"]
 
 [start]
 cmd = "node index.js"
